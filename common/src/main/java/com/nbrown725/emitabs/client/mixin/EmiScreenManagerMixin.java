@@ -91,19 +91,24 @@ public class EmiScreenManagerMixin {
         GuiGraphics g = context.raw();
 
         // Draw only the tabs on the current page, positioned by slot within the page.
-        // Each tab sits in a native EMI 18px slot, with the icon inset 1px.
+        // Default tabs are transparent (icon only); the slot background appears
+        // only under the selected or hovered tab.
         int start = CreativeTabs.page * CreativeTabs.perPage;
         int end = Math.min(total, start + CreativeTabs.perPage);
         for (int i = start; i < end; i++) {
             int slot = i - start;
             int sx = CreativeTabs.tabsStartX + slot * CreativeTabs.SPACING;
-            EmiTexture.SLOT.render(g, sx, CreativeTabs.rowY, delta);
+            boolean active = i == CreativeTabs.selected;
+            boolean hover = i == hovered;
+            if (active || hover) {
+                EmiTexture.SLOT.render(g, sx, CreativeTabs.rowY, delta);
+            }
             g.renderItem(tabs.get(i).icon, sx + 1, CreativeTabs.rowY + 1);
-            if (i == CreativeTabs.selected) {
+            if (active) {
                 // EMI's native slot highlight, persistent so the active tab always glows
                 EmiRenderHelper.drawSlotHightlight(context, sx, CreativeTabs.rowY,
                         CreativeTabs.SPACING, CreativeTabs.SPACING, 0);
-            } else if (i == hovered) {
+            } else if (hover) {
                 // fainter sheen for the tab under the cursor
                 context.fill(sx, CreativeTabs.rowY, CreativeTabs.SPACING, CreativeTabs.SPACING, 0x40FFFFFF);
             }
