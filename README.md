@@ -1,9 +1,37 @@
-# creativetabs
+# EMI Tabs
 
-## Setup
+An [EMI](https://emi.dev/) add-on for Minecraft **1.21.1** that adds a row of creative-mode tabs above EMI's item list.
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+Works on both **Fabric** and **NeoForge**
 
-## License
+## Requirements
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+- Minecraft 1.21.1
+- [EMI](https://modrinth.com/mod/emi)
+- Fabric Loader + Fabric API, **or** NeoForge (21.1.x)
+
+## Building
+
+The build uses JDK 21 and Gradle 8.12 (via the wrapper).
+
+```bash
+./gradlew build
+```
+
+Outputs:
+
+- `fabric/build/libs/emi-tabs-fabric-<version>.jar`
+- `neoforge/build/libs/emi-tabs-neoforge-<version>.jar`
+
+
+### Running in dev mode
+
+```bash
+./gradlew :fabric:runClient      # Fabric
+./gradlew :neoforge:runClient    # NeoForge
+```
+## Known Issues
+
+- Non-default EMI settings unsupported
+  - The tabs persist if you remove the right side panel
+  - The tabs do not work when the panel is in other posistions
