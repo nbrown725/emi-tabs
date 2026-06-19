@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "emitabs",
+	"version": "${version}",
+	"name": "EMI Tabs",
+	"description": "Adds creative-mode tabs to the top of EMI's item index so you can filter the list by creative tab.",
+	"authors": [
+		"nbrown725"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/emitabs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.nbrown725.emitabs.EmiTabs"
+		],
+		"client": [
+			"com.nbrown725.emitabs.client.EmiTabsClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "emitabs.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"emi": "*"
+	}
+}
