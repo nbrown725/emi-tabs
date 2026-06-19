@@ -23,10 +23,13 @@ jobs:
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew build
-      - name: capture build artifacts
+      - name: capture fabric jar
         uses: actions/upload-artifact@v7
         with:
-          name: Artifacts
-          path: |
-            fabric/build/libs/*.jar
-            neoforge/build/libs/*.jar
+          name: EmiTabs-Fabric
+          path: fabric/build/libs/*.jar
+      - name: capture neoforge jar
+        uses: actions/upload-artifact@v7
+        with:
+          name: EmiTabs-NeoForge
+          path: neoforge/build/libs/*.jar

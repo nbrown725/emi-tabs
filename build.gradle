@@ -9,7 +9,7 @@ subprojects {
 
 	version = rootProject.mod_version
 	group = rootProject.maven_group
-	base.archivesName = "${rootProject.name}-${project.name}" // emi-tabs-fabric / emi-tabs-neoforge
+	base.archivesName = "EmiTabs" // both loaders -> EmiTabs-<version>.jar (in each subproject's build/libs)
 
 	repositories {
 		maven { name = "TerraformersMC"; url = "https://maven.terraformersmc.com/" } // EMI
