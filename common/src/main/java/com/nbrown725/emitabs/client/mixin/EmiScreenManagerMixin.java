@@ -20,7 +20,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
-@Mixin(EmiScreenManager.class)
+// remap = false: we target EMI's own members (render/mouseClicked/lastWidth/...),
+// whose names aren't in the Minecraft mappings. All @Inject/@Shadow below inherit it.
+@Mixin(value = EmiScreenManager.class, remap = false)
 public class EmiScreenManagerMixin {
 
     // EMI's private layout-cache key. We write -1 to it to force one re-layout.

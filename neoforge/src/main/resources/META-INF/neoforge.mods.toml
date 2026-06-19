@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "CC0-1.0"
+
+[[mods]]
+modId = "emitabs"
+version = "${version}"
+displayName = "EMI Tabs"
+description = "Adds creative-mode tabs to the top of EMI's item index so you can filter the list by creative tab."
+authors = "nbrown725"
+logoFile = "assets/emitabs/icon.png"
+
+[[mixins]]
+config = "emitabs.client.mixins.json"
+
+[[dependencies.emitabs]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.emitabs]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies.emitabs]]
+modId = "emi"
+type = "required"
+versionRange = "*"
+ordering = "AFTER"
+side = "CLIENT"

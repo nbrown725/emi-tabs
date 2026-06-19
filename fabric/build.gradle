@@ -1,0 +1,7 @@
+dependencies {
+	modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
+
+	// EMI full jar (not the ":api" classifier) so we can mixin into EMI internals.
+	modImplementation "dev.emi:emi-fabric:${rootProject.emi_version}"
+}

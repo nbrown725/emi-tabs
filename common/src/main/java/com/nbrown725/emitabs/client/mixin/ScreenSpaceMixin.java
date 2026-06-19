@@ -14,7 +14,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(EmiScreenManager.ScreenSpace.class)
+// remap = false: targets EMI's own ScreenSpace members, not Minecraft's.
+@Mixin(value = EmiScreenManager.ScreenSpace.class, remap = false)
 public class ScreenSpaceMixin {
 
     @Shadow @Final public boolean search;
