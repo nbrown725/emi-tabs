@@ -134,6 +134,12 @@ public class CreativeTabs {
                 for (ItemStack stack : tab.getDisplayItems()) {
                     items.add(stack.getItem());
                 }
+                // Skip tabs that build empty, like Operator Utilities when we're
+                // not in operator mode (params has permissions = false). An empty
+                // tab would just be a button that filters to nothing.
+                if (items.isEmpty()) {
+                    continue;
+                }
                 TABS.add(new Tab(tab.getDisplayName(), tab.getIconItem(), items));
             } catch (Exception e) {
                 EmiTabs.LOGGER.error("Failed to read a creative tab", e);
