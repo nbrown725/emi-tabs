@@ -7,7 +7,7 @@ plugins {
 subprojects {
 	apply plugin: "dev.architectury.loom"
 
-	version = rootProject.mod_version
+	version = "${rootProject.mod_version}+${rootProject.minecraft_version}" // e.g. 1.0.0+1.21.1
 	group = rootProject.maven_group
 	base.archivesName = "EmiTabs" // both loaders -> EmiTabs-<version>.jar (in each subproject's build/libs)
 
