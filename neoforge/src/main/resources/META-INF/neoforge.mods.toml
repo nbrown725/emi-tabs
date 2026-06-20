@@ -9,6 +9,9 @@ displayName = "EMI Tabs"
 description = "Adds creative-mode tabs to the top of EMI's item index so you can filter the list by creative tab."
 authors = "nbrown725"
 logoFile = "assets/emitabs/icon.png"
+# Client-side only: skip this mod in the client/server network handshake so a
+# client running it can join servers that don't have it.
+displayTest = "IGNORE_ALL_VERSIONS"
 
 [[mixins]]
 config = "emitabs.client.mixins.json"
