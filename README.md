@@ -35,3 +35,5 @@ Outputs:
 - Non-default EMI settings unsupported
   - The tabs persist if you remove the right side panel
   - The tabs do not work when the panel is in other posistions
+ 
+Original idea from [EMI++](https://modrinth.com/mod/emixx)
