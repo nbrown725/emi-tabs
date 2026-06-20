@@ -20,8 +20,8 @@ The build uses JDK 21 and Gradle 8.12 (via the wrapper).
 
 Outputs:
 
-- `fabric/build/libs/emi-tabs-fabric-<version>.jar`
-- `neoforge/build/libs/emi-tabs-neoforge-<version>.jar`
+- `fabric/build/libs/EmiTabs-fabric-<version>.jar`
+- `neoforge/build/libs/EmiTabs-neoforge-<version>.jar`
 
 
 ### Running in dev mode

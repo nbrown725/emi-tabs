@@ -8,8 +8,9 @@
 		"nbrown725"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/nbrown725/emi-tabs",
+		"sources": "https://github.com/nbrown725/emi-tabs",
+		"issues": "https://github.com/nbrown725/emi-tabs/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/emitabs/icon.png",

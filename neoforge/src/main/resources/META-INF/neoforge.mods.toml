@@ -1,6 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[1,)"
 license = "MIT"
+issueTrackerURL = "https://github.com/nbrown725/emi-tabs/issues"
 
 [[mods]]
 modId = "emitabs"
@@ -8,6 +9,7 @@ version = "${version}"
 displayName = "EMI Tabs"
 description = "Adds creative-mode tabs to the top of EMI's item index so you can filter the list by creative tab."
 authors = "nbrown725"
+displayURL = "https://github.com/nbrown725/emi-tabs"
 logoFile = "assets/emitabs/icon.png"
 # Client-side only: skip this mod in the client/server network handshake so a
 # client running it can join servers that don't have it.
